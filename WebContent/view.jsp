@@ -2,13 +2,14 @@
 <%@page import="lee.myoung.jae.vo.Board"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%
-String strId = request.getParameter("id");
-int id = Integer.parseInt(strId);
-Board param = new Board();
-param.setId(id);
-
-BoardController controller = new BoardController();
-Board board = controller.selectOne(param);
+	String strId = request.getParameter("id");
+	int id = Integer.parseInt(strId);
+	
+	Board param = new Board();
+	param.setId(id);
+	
+	BoardController controller = new BoardController();
+	Board board = controller.selectOne(param);
 %>
 <!doctype HTML>
 <html>
